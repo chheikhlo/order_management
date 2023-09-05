@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Order Details{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+   
+   <h1>Details</h1>
+
+   <h3>Details of order {{id}}</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Référence</th>
+                <th>CreatedAt</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ order_detail.id }}</td>
+                <td>{{ order_detail.reference }}</td>
+                <td>{{ order_detail.createdAt|date('d/m/Y H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        
+</div>
+{% endblock %}
